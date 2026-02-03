@@ -17,14 +17,18 @@
       line-height: 1.6;
       background-color: #f4f4f4;
     }
+
     header {
-      background-color: #333;
+      background-color: rgba(0,0,0,0.7);
       color: white;
       padding: 1rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     header img {
       height: 50px;
@@ -38,27 +42,96 @@
     nav a:hover {
       text-decoration: underline;
     }
+
+    /* ===== HERO SECTION (WELCOME) ===== */
+    .hero {
+      background: 
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url('hero-building.jpg') center/cover no-repeat;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+    }
+
+    .hero-box {
+      background: rgba(0,0,0,0.45);
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .hero h2 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 700;
+      color: #e5e7eb;
+    }
+
+    .hero .role {
+      margin: 6px 0;
+      font-size: 15px;
+      font-weight: 500;
+      color: #93c5fd;
+    }
+
+    .hero .line {
+      width: 60px;
+      height: 3px;
+      background: #3b82f6;
+      margin: 10px auto;
+    }
+
+    .hero .tagline {
+      font-size: 16px;
+      font-weight: 600;
+      color: #f1f5f9;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: #f3f4f6;
+    }
+
     .container {
       padding: 2rem;
       max-width: 1100px;
       margin: auto;
       background: white;
       margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
+
     footer {
       background: #222;
       color: white;
       text-align: center;
       padding: 1rem;
     }
-    h1, h2 {
-      margin-bottom: 1rem;
-    }
+
     img, video {
       max-width: 100%;
       height: auto;
       margin: 10px 0;
       border-radius: 6px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 28px;
+      }
     }
   </style>
 
@@ -84,27 +157,21 @@
   </nav>
 </header>
 
-<section id="home" class="container">
-  <h1>Welcome to Ritu Construction</h1>
+<!-- ===== HERO / WELCOME ===== -->
+<section id="home" class="hero">
+  <div class="hero-box">
+    <h1>Welcome to Ritu Construction</h1>
 
-  <!-- FRONT CONTENT (SAME – NOT TOUCHED) -->
-  <div style="text-align:center; margin-top:10px;">
-    <h2 style="margin:0; font-size:22px; font-weight:700; color:#1f2937;">
-      Er. Ankit Balak Kamble
-    </h2>
-    <p style="margin:4px 0; font-size:15px; font-weight:500; color:#2563eb;">
-      Founder & Civil Engineer
-    </p>
-    <div style="width:60px; height:3px; background:#2563eb; margin:8px auto;"></div>
-    <p style="font-size:16px; font-weight:600; color:#374151;">
-      Trusted Building & Civil Contractor
+    <h2>Er. Ankit Balak Kamble</h2>
+    <div class="role">Founder & Civil Engineer</div>
+    <div class="line"></div>
+    <div class="tagline">Trusted Building & Civil Contractor</div>
+
+    <p>
+      We provide professional construction and consultancy services tailored to your needs.
+      Our experienced team ensures quality and reliability in every project.
     </p>
   </div>
-
-  <p style="margin-top:15px;">
-    We provide professional construction and consultancy services tailored to your needs.
-    Our experienced team ensures quality and reliability in every project.
-  </p>
 </section>
 
 <section id="about" class="container">
@@ -118,12 +185,10 @@
 <section id="site-work" class="container">
   <h2>Our Site Work (Preview)</h2>
 
-  <!-- EXISTING VIDEO -->
   <video controls>
     <source src="4_5930433611877583322.mp4" type="video/mp4">
   </video>
 
-  <!-- EXISTING IMAGES -->
   <img src="IMG_20251222_23443960.jpeg">
   <img src="Screenshot_2025-12-22-23-38-31-64_6012fa4d4ddec268fc5c7112cbb265e7.jpg">
 
@@ -150,3 +215,4 @@
 
 </body>
 </html>
+ 
