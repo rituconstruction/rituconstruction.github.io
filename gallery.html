@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -17,30 +17,41 @@
     padding:15px;
     text-align:center;
   }
+  header a {
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+  }
   .container {
-    max-width:1100px;
+    max-width:1200px;
     margin:auto;
     padding:20px;
   }
-  .work-item {
-    background:#fff;
-    padding:15px;
-    margin-bottom:25px;
-    border-radius:8px;
-    box-shadow:0 2px 6px rgba(0,0,0,0.1);
-  }
-  .work-item h3 {
-    margin-bottom:10px;
+
+  h3 {
     color:#1f2937;
+    margin-bottom:15px;
   }
-  img, video {
-    width:100%;
-    border-radius:6px;
+
+  /* ===== GALLERY GRID ===== */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
   }
-  a {
-    color:#2563eb;
-    text-decoration:none;
-    font-weight:bold;
+
+  .gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
   }
 </style>
 </head>
@@ -54,23 +65,26 @@
 
 <div class="container">
 
-  <!-- ===== COPY-PASTE BLOCK START ===== -->
-  <div class="work-item">
-    <h3>Foundation Work</h3>
-    <img src="assets/images/foundation.jpg" alt="Foundation Work">
-  </div>
-  <!-- ===== COPY-PASTE BLOCK END ===== -->
+  <h3>Recent Site Work Photos</h3>
 
-  <div class="work-item">
-    <h3>RCC Column Work</h3>
-    <img src="assets/images/rcc-column.jpg" alt="RCC Column Work">
-  </div>
+  <div class="gallery">
 
-  <div class="work-item">
-    <h3>Slab Casting</h3>
-    <video controls>
-      <source src="assets/videos/slab-casting.mp4" type="video/mp4">
-    </video>
+    <img src="images/IMG20241022153248.jpg" alt="Site Work">
+    <img src="images/IMG20241209083501.jpg" alt="Site Work">
+    <img src="images/IMG20241210083249.jpg" alt="Site Work">
+    <img src="images/IMG20241210083310.jpg" alt="Site Work">
+    <img src="images/IMG20250124175507.jpg" alt="Site Work">
+    <img src="images/IMG20250313141047.jpg" alt="Site Work">
+    <img src="images/IMG20250315111623.jpg" alt="Site Work">
+    <img src="images/IMG20250328090338.jpg" alt="Site Work">
+    <img src="images/IMG20250612074300.jpg" alt="Site Work">
+    <img src="images/IMG20250612074350.jpg" alt="Site Work">
+    <img src="images/IMG20250612075912.jpg" alt="Site Work">
+    <img src="images/IMG_20240810_181900.jpg" alt="Site Work">
+    <img src="images/IMG_20240916_175537.jpg" alt="Site Work">
+    <img src="images/IMG_20241010_122946.jpg" alt="Site Work">
+    <img src="images/IMG_20241010_123006.jpg" alt="Site Work">
+
   </div>
 
 </div>
